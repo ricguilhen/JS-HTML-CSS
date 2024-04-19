@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Sala</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 id="title">Reserva de Sala de Aula</h1>
+    <br>
+
+    <section id="tudo">
+
+        <label for="nome">Nome do Professor</label>
+        <br>
+        <input type="text" name="nome" id="nome" placeholder="Insira o nome do Professor">
+
+        <br>
+        <label for="cont">Contato</label>
+        <br>
+        <input type="text" name="cont" id="cont" placeholder="Insira o contato do Professor">
+
+        <br>
+        <label for="qtd">N° de Alunos</label>
+        <br>
+        <input type="number" name="qtd" id="qtd">
+
+        <br>
+        <label for="dis">Disciplina</label>
+        <br>
+        <input type="text" name="dis" id="dis" placeholder="Insira a disciplina">
+
+        <br>
+        <label for="opcao">Deseja Projetor?</label>
+        <br>
+        <select name="opcao" id="opcao">
+            <option value="s">Sim</option>
+            <option value="n">Não</option>
+        </select>
+
+        <br>
+        <br>
+        <br>
+        <button id="submit" onclick="conf()">Enviar</button>
+
+
+    </section>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>

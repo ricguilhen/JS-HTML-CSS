@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms da Culinaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1 id="title">RESERVA DO RESTURRANT</h1>
+
+    <section id="tudo">
+
+        <label for="nome">Nome</label>
+        <br>
+        <input type="text" name="nome" id="nome">
+
+        <br>
+        <label for="nome">Email</label>
+        <br>
+        <input type="email" name="email" id="email">
+
+        <br>
+        <label for="opcao">Environment</label>
+        <br>
+        <select id="opcao">
+            <option value="weeds">Folhas</option>
+            <option value="whey">Proteínas</option>
+            <option value="cocked">Cozidos</option>
+            <option value="folder">Massas</option>
+        </select>
+    <br>
+    <button id="send" onclick="submit()">Submit</button>
+
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
