@@ -1,1 +1,102 @@
 <!-- Pagina do Catalogo de Produtos -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8ieS : Cadastro</title>
+    <link rel="stylesheet" href="/css/catalogo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://fonts.cdnfonts.com/css/genty-demo" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+
+            <a href="#" class="nav-logo">8ieS</a>
+    
+            <ul class="nav-all-items">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Produtos</a>
+                    <a href="#" class="nav-link">Carrinho</a>
+                </li>
+            </ul>
+
+            <span id="admin-message"></span>
+    
+            <button class="btn" id="form-open">Log In</button>
+            <button class="btn" id="logout-button">Log Out</button>
+
+        </nav>
+    </header>
+
+    <!-- Parte de Cadastro de Produtos -->
+
+    <!-- Cadastro -->
+    <section class="cadastro">
+        <div class="form-container">
+
+            <!-- Cadastro Form -->
+            <div class="form cadastro-form">
+                <form action="#">
+                    <h2>Cadastro de Produtos</h2>
+
+                    <div class="input-box">
+                        <input type="text" id="nome-prod" placeholder="Nome do Produto..." required>
+                        <i class="uil uil-box product"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="image-prod" placeholder="URL da Imagem do Produto..." required>
+                        <i class="uil uil-image image"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="desc-prod" placeholder="Descrição do Produto..." required>
+                        <i class="uil uil-comment-alt-lines description"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="price-prod" placeholder="Preço do Produto..." required>
+                        <i class="uil uil-dollar-sign price"></i>
+                    </div>
+
+                    <div class="select-box">
+                        <select class="select-class" name="product-type" id="product-type">
+                            <option value="default">Categoria do Produto...</option>
+                            <option value="roda">Rodas</option>
+                            <option value="truck">Truck</option>
+                            <option value="longboard">Longboard</option>
+                            <option value="rolamento">Rolamento</option>
+                            <option value="lixa">Lixa</option>
+                            <option value="sk-montado">Skate Montado</option>
+                            <option value="old-school">Old School</option>
+                            <option value="shape-maple">Shape Maple</option>
+                            <option value="shape-powerlyte">Shape Powerlyte</option>
+                            <option value="shape-nacional">Shape Nacional</option>
+                        </select>
+                        <label for="product-type">
+                            <i class="uil uil-list-ui-alt type"></i>
+                        </label>
+                    </div>
+
+                    <button class="btn">Cadastrar</button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/catalogo.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

@@ -33,6 +33,7 @@ a{
     margin: 0 auto;
 }
 
+
 .nav,
 .nav-item{
     display: flex;
@@ -41,13 +42,28 @@ a{
     justify-content: space-between;
 }
 
+@media screen and (max-width: 600px) {
+    .nav,
+    .nav-item {
+        flex-direction: column;
+    }
+}
+
 .nav-link,
 .nav-logo,
+#admin-message,
 .btn{
     color: #1b1b1b;
     font-weight: bold;
     font-size: 20px;
 }
+
+#admin-message{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 
 .nav-logo{
     font-size: 65px;

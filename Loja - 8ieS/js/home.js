@@ -86,6 +86,10 @@ signupButton.addEventListener("click", (e) => {
 formContainer.classList.remove("active");
 });
 
+// Declaracao
+
+const stateChangedEvent = new Event('stateChanged');
+
 // Login
 
 const loginButtonNav = document.querySelector("#form-open");
@@ -115,9 +119,11 @@ loginButton.addEventListener("click", (e) => {
         alert("Login realizado com sucesso!");
 
         if (loginEmailInput.value === "admin" && loginPasswordInput.value === "admin") {
-            productRegisterOption.style.display = "block";
             localStorage.setItem("admin", "true");
         }
+
+        updateNavbar();
+        window.location.reload();
     } else {
         alert("E-mail ou senha incorretos. Por favor, tente novamente.");
     }
@@ -130,6 +136,9 @@ logoutButton.addEventListener("click", () => {
     productRegisterOption.style.display = "none";
     localStorage.removeItem("admin");
     alert("Você foi deslogado com sucesso!");
+
+    updateNavbar();
+    window.location.reload();
 });
 
 // Admin
