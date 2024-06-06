@@ -133,7 +133,6 @@ logoutButton.addEventListener("click", () => {
     localStorage.removeItem("logged");
     loginButtonNav.style.display = "block";
     logoutButton.style.display = "none";
-    productRegisterOption.style.display = "none";
     localStorage.removeItem("admin");
     alert("Você foi deslogado com sucesso!");
 
@@ -160,9 +159,5 @@ window.addEventListener("load", () => {
     if (localStorage.getItem("logged") === "true") {
         loginButtonNav.style.display = "none";
         logoutButton.style.display = "block";
-
-        if (localStorage.getItem("admin") === "true") {
-            productRegisterOption.style.display = "block";
-        }
     }
 });
