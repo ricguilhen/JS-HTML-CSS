@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    position: relative;
+    background-color: #fcd8b8 !important;
+}
+
+::selection{
+    background: #1b1b1b;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: #fcd8b8;
+}
+
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.nav,
+.nav-item{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .nav,
+    .nav-item {
+        flex-direction: column;
+    }
+}
+
+.nav-link,
+.nav-logo,
+#admin-message,
+.btn{
+    color: #1b1b1b;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#admin-message{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.nav-logo{
+    font-size: 65px;
+    font-family: 'Genty Demo', sans-serif;
+    margin-top: 10px;
+
+}
+
+.nav-item{
+    column-gap: 25px;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: #1595a4;
+    transition: 0.2s;
+}
+
+.btn{
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+body{
+    margin-top:20px;
+    background:#eee;
+}
+.ui-w-40 {
+    width: 40px !important;
+    height: auto;
+}
+
+.card{
+    box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);    
+}
+
+.ui-product-color {
+    display: inline-block;
+    overflow: hidden;
+    margin: .144em;
+    width: .875rem;
+    height: .875rem;
+    border-radius: 10rem;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+    vertical-align: middle;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.table {
+    width: 100%;
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+.table th, .table td {
+    vertical-align: middle; /* Alinha verticalmente ao centro */
+}
+
+#admin-message{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 20px;
+}

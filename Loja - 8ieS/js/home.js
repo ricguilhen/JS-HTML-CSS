@@ -120,10 +120,11 @@ loginButton.addEventListener("click", (e) => {
 
         if (loginEmailInput.value === "admin" && loginPasswordInput.value === "admin") {
             localStorage.setItem("admin", "true");
+            window.location.href = "catalogo.html"; // Redireciona para a página de catálogo
+        } else {
+            updateNavbar();
+            window.location.reload();
         }
-
-        updateNavbar();
-        window.location.reload();
     } else {
         alert("E-mail ou senha incorretos. Por favor, tente novamente.");
     }

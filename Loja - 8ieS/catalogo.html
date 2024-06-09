@@ -14,7 +14,6 @@
     <link href="https://fonts.cdnfonts.com/css/genty-demo" rel="stylesheet">
 </head>
 <body>
-    
     <!-- Header -->
     <header class="header">
         <nav class="nav">
@@ -29,20 +28,22 @@
                 </li>
             </ul>
 
-            <span id="admin-message"></span>
+            <span id="admin-message">Modo Administrador</span>
     
             <button class="btn" id="form-open">Log In</button>
             <button class="btn" id="logout-button">Log Out</button>
 
         </nav>
     </header>
-
+<br>
+<br>
+<br>
     <!-- Catalogo -->
     <section class="catalogo">
-        <div class="product-container">
-           
-        </div>
+        <div id="product-container"></div>
     </section>
+
+
     <!-- Parte de Cadastro de Produtos -->
 
     <!-- Cadastro -->
@@ -100,6 +101,21 @@
 
         </div>
     </section>
+
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Imagem</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Categoria</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+        </tbody>
+    </table>
 
     <script src="js/catalogo.js"></script>
     <script src="js/auth.js"></script>

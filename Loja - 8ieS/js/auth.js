@@ -44,6 +44,8 @@ function updateNavbar() {
     const adminMessage = document.querySelector("#admin-message");
     const home = document.querySelector(".home");
 
+    const isCatalogPage = window.location.href.endsWith("catalogo.html");
+
     if (isLoggedIn()) {
         loginButtonNav.style.display = "none";
         logoutButton.style.display = "block";
@@ -52,16 +54,56 @@ function updateNavbar() {
             body.style.backgroundImage = "url('img/ADMINhomeBG-4K.png')";
             adminMessage.style.display = "block";
         } else {
-            body.style.backgroundImage = "url('img/VERDADEIROhomeBG-4K.png')";
+            if (isCatalogPage) {
+                body.style.backgroundColor = "#fcd8b8";
+                body.style.backgroundImage = "none";
+            } else {
+                body.style.backgroundImage = "url('img/VERDADEIROhomeBG-4K.png')";
+            }
             adminMessage.style.display = "none";
         }
     } else {
         loginButtonNav.style.display = "block";
         logoutButton.style.display = "none";
-        body.style.backgroundImage = "url('img/VERDADEIROhomeBG-4K.png')";
+        if (isCatalogPage) {
+            body.style.backgroundColor = "#fcd8b8";
+            body.style.backgroundImage = "none";
+        } else {
+            body.style.backgroundImage = "url('img/VERDADEIROhomeBG-4K.png')";
+        }
         adminMessage.style.display = "none";
     }
 }
+
+function updateVisibility() {
+    const cadastroSection = document.querySelector(".cadastro");
+    const productTable = document.querySelector("#product-table");
+
+    if (isAdmin()) {
+        cadastroSection.style.display = "block";
+        productTable.style.display = "";
+    } else {
+        cadastroSection.style.display = "none";
+        productTable.style.display = "none";
+    }
+}
+
+window.addEventListener("load", function() {
+    document.getElementById("logout-button").addEventListener("click", function(event) {
+        event.preventDefault();
+        logout();
+        window.location.reload();
+    });
+});
+
+window.addEventListener("load", function() {
+    document.getElementById("form-cad").addEventListener("submit", function(event) {
+        event.preventDefault();
+        addProduct(event);
+    });
+    loadProducts();
+    updateVisibility();
+});
 
 window.updateNavbar = updateNavbar;
 window.addEventListener("load", updateNavbar);

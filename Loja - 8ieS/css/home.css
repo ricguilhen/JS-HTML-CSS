@@ -25,6 +25,7 @@ a{
     width: 100%;
     z-index: 100;
     padding: 0 20px;
+    background-color: #fcd8b8;
 }
 
 .nav{
@@ -98,13 +99,16 @@ a{
 
 /* Home */
 
-.home{
+.home,
+body{
     position: relative;
     height: 100vh;
     width: 100%;
     background-image: url("/img/VERDADEIROhomeBG-4K.png");
+    background-color: #fcd8b8;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .home::before{
@@ -246,4 +250,21 @@ a{
 
 .login-signup a:active{
     color: #1b1b1b;
+}
+
+.nav-logo{
+    margin-top: 15px;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.cover{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 200vh;
 }
