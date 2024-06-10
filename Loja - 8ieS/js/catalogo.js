@@ -27,8 +27,8 @@ function saveProduct(event, index = null) {
     loadProducts();
 }
 
-function loadProducts() {
-    const products = JSON.parse(localStorage.getItem("products"));
+function loadProducts(storageKey = "products") {
+    const products = JSON.parse(localStorage.getItem(storageKey));
     const productTableBody = document.getElementById("product-table-body");
     const productContainer = document.getElementById("product-container");
 
@@ -164,6 +164,72 @@ function addToCart(index) {
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Produto adicionado ao carrinho!");
 }
+
+function filterProducts(searchValue) {
+    const products = getFromLocalStorage("products");
+    return products.filter(product => product.name.toLowerCase().includes(searchValue.toLowerCase()));
+}
+
+const checkboxes = document.querySelectorAll('input[name="category"]');
+
+function filterProductsByCategory(category) {
+    const products = getFromLocalStorage("products");
+    return products.filter(product => product.category === category);
+}
+
+function displayProducts(products) {
+    const productContainer = document.getElementById("product-container");
+    productContainer.innerHTML = '';
+
+    products.forEach((product, index) => {
+        const productCard = document.createElement("div");
+        productCard.classList.add("product-card");
+        productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h2>${product.name}</h2>
+            <p>${product.desc}</p>
+            <h3>R$ ${product.price}</h3>
+            <button id="add-btn" onclick="addToCart(${index})">Adicionar ao carrinho</button>
+        `;
+        productContainer.appendChild(productCard);
+    });
+}
+
+// Eventos
+
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+        checkboxes.forEach(box => {
+            if(box !== this) box.checked = false;
+        });
+
+        if(this.checked) {
+            const category = this.value;
+            const filteredProducts = filterProductsByCategory(category);
+            displayProducts(filteredProducts);
+        } else {
+            const allProducts = getFromLocalStorage("products");
+            displayProducts(allProducts);
+        }
+    });
+});
+
+document.getElementById("btn-search").addEventListener("click", function() {
+    const searchValue = document.getElementById("search-input").value;
+    const filteredProducts = filterProducts(searchValue);
+    localStorage.setItem("filteredProducts", JSON.stringify(filteredProducts));
+    loadProducts("filteredProducts");
+});
+
+document.querySelector(".nav-link").addEventListener("click", function() {
+    localStorage.removeItem("filteredProducts");
+    loadProducts();
+});
+
+window.addEventListener("load", function() {
+    localStorage.removeItem("filteredProducts");
+    loadProducts();
+});
 
 document.getElementById("form-open").addEventListener("click", function() {
     window.location.href = "home.html";

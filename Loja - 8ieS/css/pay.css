@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    width: 100%;
+    position: relative;
+    background-color: #fcd8b8 !important;
+}
+
+::selection{
+    background: #1b1b1b;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: #fcd8b8;
+}
+
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.nav,
+.nav-item{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .nav,
+    .nav-item {
+        flex-direction: column;
+    }
+}
+
+.nav-link,
+.nav-logo,
+#admin-message,
+.btn{
+    color: #1b1b1b;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#admin-message{
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.nav-logo{
+    font-size: 65px;
+    font-family: 'Genty Demo', sans-serif;
+    margin-top: 10px;
+
+}
+
+.nav-item{
+    column-gap: 25px;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: #1595a4;
+    transition: 0.2s;
+}
+
+.btn{
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.buttons{
+    padding: 8px 20px;
+    border: 2px solid #1d1d1d;
+    background-color: #1d1d1d;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.buttons:active{
+    scale: 0.98;
+}
+
+.buttons:hover{
+    background-color: #434343;
+    transition: 100ms;
+}
+
+.all-forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.all-forms input{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #1d1d1d;
+    width: 300px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.all-forms input:focus{
+    outline: none;
+    font-weight: bold;
+}
+
+.all-forms i{
+    font-size: 30px;
+    color: #1d1d1d;
+}
+
+.buttons{
+    margin-top: 20px;
+}
+
+.all-forms h2{
+    border-bottom: solid 2px #1b1b1b;
+    margin-bottom: 20px;
+    padding: 5px;
+}

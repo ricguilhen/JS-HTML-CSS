@@ -19,13 +19,13 @@
     <header class="header">
         <nav class="nav">
     
-            <a href="#" class="nav-logo">8ieS</a>
+            <a href="home.html" class="nav-logo">8ieS</a>
         
             <ul class="nav-all-items">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">Produtos</a>
-                    <a href="#" class="nav-link">Carrinho</a>
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="catalogo.html" class="nav-link">Produtos</a>
+                    <a href="carrinho.html" class="nav-link">Carrinho</a>
                 </li>
             </ul>
     
@@ -42,23 +42,28 @@
     <br>
 
     <!-- Carrinho -->
-    <table id="cart-table">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody id="cart-table-body">
-            <!-- Os itens do carrinho serão inseridos aqui pelo JavaScript -->
-        </tbody>
-    </table>
-    <div id="total-price">
-        <!-- O preço total será inserido aqui pelo JavaScript -->
+    <div class="cart-container-all">
+        <h1>Carrinho</h1>
+        <div class="cart-container">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-table-body">
+                <!-- Itens do carrinho serão inseridos aqui -->
+                </tbody>
+            </table>
+            <div id="total-price">
+            <!-- Preço total será inserido aqui -->
+            </div>
+        </div>
+        <button id="checkout-button">Ir para o pagamento</button>
     </div>
-    <button id="checkout-button">Ir para o pagamento</button>
 
 
     <script src="/js/auth.js"></script>

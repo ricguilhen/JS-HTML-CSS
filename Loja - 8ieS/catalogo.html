@@ -18,26 +18,64 @@
     <header class="header">
         <nav class="nav">
 
-            <a href="#" class="nav-logo">8ieS</a>
+            <a href="home.html" class="nav-logo">8ieS</a>
     
             <ul class="nav-all-items">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">Produtos</a>
-                    <a href="#" class="nav-link">Carrinho</a>
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="catalogo.html" class="nav-link">Produtos</a>
+                    <a href="carrinho.html" class="nav-link">Carrinho</a>
                 </li>
             </ul>
 
             <span id="admin-message">Modo Administrador</span>
+            <div class="bp">
+                <input type="text" id="search-input" placeholder="Pesquisar produtos...">
+                <button id="btn-search">Buscar</button>
+            </div>
     
             <button class="btn" id="form-open">Log In</button>
             <button class="btn" id="logout-button">Log Out</button>
 
+
         </nav>
+
+        <div class="categories">
+            <input type="checkbox" id="roda" name="category" value="roda">
+            <label for="roda">Rodas</label>
+            
+            <input type="checkbox" id="truck" name="category" value="truck">
+            <label for="truck">Truck</label>
+
+            <input type="checkbox" id="lixa" name="category" value="lixa">
+            <label for="lixa">Lixa</label>
+
+            <input type="checkbox" id="longboard" name="category" value="longboard">
+            <label for="longboard">Longboard</label>
+
+            <input type="checkbox" id="sk-montado" name="category" value="sk-montado">
+            <label for="sk-montado">Skate Montado</label>
+
+            <input type="checkbox" id="shape-maple" name="category" value="shape-maple">
+            <label for="shape-maple">Shape Maple</label>
+
+            <input type="checkbox" id="shape-powerlyte" name="category" value="shape-powerlyte">
+            <label for="shape-powerlyte">Shape Powerlyte</label>
+
+            <input type="checkbox" id="shape-nacional" name="category" value="shape-nacional">
+            <label for="shape-nacional">Shape Nacional</label>
+
+            <input type="checkbox" id="rolamento" name="category" value="rolamento">
+            <label for="rolamento">Rolamento</label>
+            
+            <input type="checkbox" id="old-school" name="category" value="old-school">
+            <label for="old-school">Old School</label>
+            
+        </div>
     </header>
-<br>
-<br>
-<br>
+
+<br><br><br><br><br><br><br><br>
+
     <!-- Catalogo -->
     <section class="catalogo">
         <div id="product-container"></div>

@@ -22,7 +22,6 @@ a{
 
 .header{
     position: fixed;
-    height: 80px;
     width: 100%;
     z-index: 100;
     padding: 0 20px;
@@ -98,12 +97,12 @@ a{
 
 .cadastro{
     position: relative;
-    height: 100vh;
+    height: 600px;
     width: 100%;
     background-size: cover;
     background-position: center;
-    margin-bottom: -300px;
-    margin-top: -300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .home::before{
@@ -339,4 +338,49 @@ a{
     color: #ff0000;
     font-weight: bold;
     font-size: 20px;
+}
+
+#search-input{
+    border-style: none;
+    border: solid 2px #1b1b1b;
+    padding: 2px 8px;
+    transition: 200ms;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+#search-input:focus{
+    outline: none;
+    border-color: #1595a4;
+    transition: 100ms;
+    font-weight: bold;
+}
+
+#btn-search{
+    padding: 2px 8px;
+    border: 2px solid #1d1d1d;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#btn-search:active{
+    transform: scale(0.98);
+}
+
+.categories{
+    background-color: #fcd8b8;
+    color: #1b1b1b;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 50px;
+    border-bottom: solid 2px#1b1b1b;
+}
+
+.categories input{
+    margin: 8px;
+    padding: 8px;
 }

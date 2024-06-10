@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8ieS : Pagamento</title>
+    <link rel="stylesheet" href="/css/pay.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://fonts.cdnfonts.com/css/genty-demo" rel="stylesheet">
+</head>
+<body>
+    
+ <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+
+            <a href="home.html" class="nav-logo">8ieS</a>
+    
+            <ul class="nav-all-items">
+                <li class="nav-item">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="catalogo.html" class="nav-link">Produtos</a>
+                    <a href="carrinho.html" class="nav-link">Carrinho</a>
+                </li>
+            </ul>
+
+            <span id="admin-message">Modo Administrador</span>
+    
+            <button class="btn" id="form-open">Log In</button>
+            <button class="btn" id="logout-button">Log Out</button>
+            
+        </nav>
+    </header>
+    <br><br><br><br>
+
+<div class="all-forms">
+
+    <div id="address">
+        <div class="adress-container">
+
+            <div class="form adress-form">
+                <form action="#">
+                    <h2>Endereço de entrega</h2>
+
+                    <div class="input-box">
+                        <input type="text" id="cep" placeholder="CEP..." required>
+                        <i class="uil uil-location-pin-alt adress"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="adress-input" placeholder="Endereço..." required>
+                        <i class="uil uil-map"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="number" placeholder="Número..." required>
+                        <i class="uil uil-map-marker-question"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="complement" placeholder="Complemento..." required>
+                        <i class="uil uil-sign-alt"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="form-pay">
+        <div class="form-container">
+
+            <div class="form pay-form">
+                <form action="#">
+                    <h2>Pagamento</h2>
+
+                    <div class="input-box">
+                        <input type="text" id="card-number" placeholder="Número do cartão..." required>
+                        <i class="uil uil-credit-card card"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="card-name" placeholder="Nome do titular..." required>
+                        <i class="uil uil-user card"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="card-expiration" placeholder="Data de expiração..." required>
+                        <i class="uil uil-calendar-alt card"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="text" id="card-cvv" placeholder="CVV..." required>
+                        <i class="uil uil-lock card"></i>
+                    </div>
+
+                    <button class="buttons" id="pay-button">Pagar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/pay.js"></script>
+</body>
+</html>

@@ -10,8 +10,8 @@ function loadCart() {
             productRow.innerHTML = `
                 <td><img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px;"></td>
                 <td>${product.name}</td>
-                <td>R$ ${product.price}</td>
-                <td><button onclick="removeFromCart(${index})">Remover</button></td>
+                <td id="price">R$${product.price}</td>
+                <td><button id="rem-button" onclick="removeFromCart(${index})">Remover</button></td>
             `;
             cartTableBody.appendChild(productRow);
             totalPrice += parseFloat(product.price);
@@ -27,5 +27,13 @@ function removeFromCart(index) {
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
 }
+
+document.getElementById("checkout-button").addEventListener("click", function() {
+    window.location.href = "pay.html";
+});
+
+document.getElementById("form-open").addEventListener("click", function() {
+    window.location.href = "home.html";
+});
 
 window.addEventListener("load", loadCart);
