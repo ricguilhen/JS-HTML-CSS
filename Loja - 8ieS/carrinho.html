@@ -42,34 +42,24 @@
     <br>
 
     <!-- Carrinho -->
-    <!-- HTML -->
-<section class="carrinho">
-    <div class="container px-3 my-5 clearfix">
-        <div class="card">
-            <div class="card-header">
-                <h2>Shopping Cart</h2>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered m-0">
-                        <thead>
-                            <tr>
-                                <th class="text-center py-3 px-4" style="min-width: 400px;">Nome do Produto e Detalhes</th>
-                                <th class="text-right py-3 px-4" style="width: 100px;">Price</th>
-                                <th class="text-center py-3 px-4" style="width: 120px;">Quantity</th>
-                                <th class="text-right py-3 px-4" style="width: 100px;">Total</th>
-                                <th class="text-center align-middle py-3 px-0" style="width: 40px;"><a href="#" class="shop-tooltip float-none text-light" title="" data-original-title="Clear cart"><i class="ino ion-md-trash"></i></a></th>
-                            </tr>
-                        </thead>
-                        <tbody id="cart-container">
-                        </tbody>
-                    </table>
-                    <button class="btn btn-primary" id="payment-button">Ir para o pagamento</button>
-                </div>
-            </div>
-        </div>
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="cart-table-body">
+            <!-- Os itens do carrinho serão inseridos aqui pelo JavaScript -->
+        </tbody>
+    </table>
+    <div id="total-price">
+        <!-- O preço total será inserido aqui pelo JavaScript -->
     </div>
-</section>
+    <button id="checkout-button">Ir para o pagamento</button>
+
 
     <script src="/js/auth.js"></script>
     <script src="/js/carrinho.js"></script>

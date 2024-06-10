@@ -77,8 +77,35 @@ function loadProducts() {
     }
 }
 
+function getProductFromForm() {
+    return {
+        name: document.getElementById("nome-prod").value,
+        image: document.getElementById("image-prod").value,
+        desc: document.getElementById("desc-prod").value,
+        price: document.getElementById("price-prod").value,
+        category: document.getElementById("product-type").value
+    };
+}
+
+function saveToLocalStorage(key, value) {
+    try {
+        localStorage.setItem(key, JSON.stringify(value));
+    } catch (e) {
+        console.error('Erro ao salvar no localStorage', e);
+    }
+}
+
+function getFromLocalStorage(key) {
+    try {
+        return JSON.parse(localStorage.getItem(key));
+    } catch (e) {
+        console.error('Erro ao obter do localStorage', e);
+        return null;
+    }
+}
+
 function editProduct(index) {
-    const products = JSON.parse(localStorage.getItem("products"));
+    const products = getFromLocalStorage("products");
     const product = products[index];
 
     document.getElementById("nome-prod").value = product.name;
@@ -89,29 +116,26 @@ function editProduct(index) {
 
     document.getElementById("form-cad").onsubmit = function(event) {
         event.preventDefault();
-        saveProduct(event, index);
+        const product = getProductFromForm();
+        products[index] = product;
+        saveToLocalStorage("products", products);
+        loadProducts();
     }
 }
 
 function deleteProduct(index) {
-    const products = JSON.parse(localStorage.getItem("products"));
+    const products = getFromLocalStorage("products");
     products.splice(index, 1);
-    localStorage.setItem("products", JSON.stringify(products));
+    saveToLocalStorage("products", products);
     loadProducts();
 }
 
 function addProduct(event) {
     event.preventDefault();
 
-    const product = {
-        name: document.getElementById("nome-prod").value,
-        image: document.getElementById("image-prod").value,
-        desc: document.getElementById("desc-prod").value,
-        price: document.getElementById("price-prod").value,
-        category: document.getElementById("product-type").value
-    };
+    const product = getProductFromForm();
 
-    let products = JSON.parse(localStorage.getItem("products"));
+    let products = getFromLocalStorage("products");
 
     if(products) {
         products.push(product);
@@ -119,11 +143,10 @@ function addProduct(event) {
         products = [product];
     }
 
-    localStorage.setItem("products", JSON.stringify(products));
+    saveToLocalStorage("products", products);
     alert("Produto cadastrado com sucesso!");
 
     loadProducts();
-    window.location.reload();
 }
 
 function addToCart(index) {
@@ -146,12 +169,5 @@ document.getElementById("form-open").addEventListener("click", function() {
     window.location.href = "home.html";
 });
 
-window.addEventListener("load", function() {
-    document.getElementById("form-cad").addEventListener("submit", function(event) {
-        event.preventDefault();
-        addProduct(event);
-    });
-    loadProducts();
-});
 window.loadProducts = loadProducts;
 window.addEventListener("load", loadProducts);

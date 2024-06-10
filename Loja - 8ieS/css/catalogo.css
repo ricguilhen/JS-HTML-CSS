@@ -100,9 +100,10 @@ a{
     position: relative;
     height: 100vh;
     width: 100%;
-    background-color: #fcd8b8;
     background-size: cover;
     background-position: center;
+    margin-bottom: -300px;
+    margin-top: -300px;
 }
 
 .home::before{
