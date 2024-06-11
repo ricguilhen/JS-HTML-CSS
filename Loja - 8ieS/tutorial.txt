@@ -1,0 +1,5 @@
+Para entrar como admin use a conta
+usuario = admin
+senha = admin
+
+OBS: Existe um bug crucial no site, 3ão no pix se descobrir.

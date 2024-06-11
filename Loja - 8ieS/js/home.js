@@ -32,8 +32,6 @@ loginBtn.addEventListener("click", (e) => {
     formContainer.classList.remove("active");
 });
 
-// Usando [Path(Caminho*): js/objs.js]
-
 // Cadastro
 
 const signupButton = document.querySelector("#signup-button");

@@ -13,11 +13,8 @@ function generateReceipt(cart, totalPrice) {
 
     localStorage.setItem("receipt", JSON.stringify(receipt));
 
-    console.log("Recibo gerado");
-
-    setTimeout(function() {
         window.location.href = "receipt.html";
-    }, 1000);
+
 }
 
 document.getElementById("pay-button").addEventListener("click", function() {
@@ -33,7 +30,6 @@ document.getElementById("pay-button").addEventListener("click", function() {
     const confirmation = confirm(`O preço total é R$${totalPrice.toFixed(2)}. Você confirma a compra?`);
 
     if(confirmation) {
-        console.log("Compra confirmada");
         
         const receipt = {
             items: cart,
@@ -48,11 +44,12 @@ document.getElementById("pay-button").addEventListener("click", function() {
         };
 
         localStorage.setItem("receipt", JSON.stringify(receipt));
-
-        console.log("Recibo gerado");
-
-        setTimeout(function() {
-            window.location.href = "receipt.html";
-        }, 1000);
     }
+
 });
+
+function redirect(){
+    setTimeout(function() {
+        window.location.href = "receipt.html";
+    }, 1000);
+}

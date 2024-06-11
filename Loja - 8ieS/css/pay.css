@@ -33,6 +33,7 @@ a{
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
+    border-bottom: solid 2px #1b1b1b;
 }
 
 
@@ -124,6 +125,7 @@ a{
     height: 70vh;
     flex-direction: column;
     text-align: center;
+    scale: 0.8;
 }
 
 .all-forms input{

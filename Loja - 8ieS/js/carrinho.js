@@ -32,8 +32,4 @@ document.getElementById("checkout-button").addEventListener("click", function() 
     window.location.href = "pay.html";
 });
 
-document.getElementById("form-open").addEventListener("click", function() {
-    window.location.href = "home.html";
-});
-
 window.addEventListener("load", loadCart);
