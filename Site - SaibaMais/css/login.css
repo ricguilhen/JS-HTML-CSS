@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif ;
+    font-weight: bold;
+    color: white;
+}
+
+body{
+    background-color: #1d1d1d;
+}
+
+::selection {
+    color: #1d1d1d;
+    background-color: white;
+}
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    scale: 0.4;
+}
+
+.header-navbar{
+    width: 100%;
+}
+
+.navbar-brand{
+    max-height: 50px;
+    margin-top: -5.9vh;
+}
+
+.nav-link{
+    color: white;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover{
+    color: #a23a85;
+}
+
+h2{
+    color: white;
+}
+
+/* Titulo */
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+/* Form */
+
+.form-control{
+    width: 40rem;
+    margin: 10px 0;
+    background-color: #1d1d1d;
+    border: 1px solid #a23a85;
+    padding: 10px;
+    color: white;
+    transition: 100ms;
+}
+
+.form-control:active{
+    width: 45rem;
+    margin: 10px 0;
+    background-color: #1d1d1d;
+    border: 1px solid #a23a85;
+    padding: 10px;
+    color: white;
+    transition: 200ms;
+}
+
+.form-control:focus{
+    width: 45rem;
+    margin: 10px 0;
+    background-color: #1d1d1d;
+    border: 1px solid #a23a85;
+    padding: 10px;
+    color: white;
+    transition: 200ms;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    flex-direction: column;
+}
+
+.btn-pos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.btn{
+    background-color: #a23a85;
+    border: 1px solid #a23a85;
+}
+
+.btn:hover{
+    background-color: #1d1d1d;
+    border: 1px solid #a23a85;
+}
+
+.cad-text-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    gap: 0.5rem;
+}
+
+a{
+    color: #a23a85;
+    transition: 100ms;
+}
+
+a:hover{
+    color: white;
+    transition: 200ms;
+}

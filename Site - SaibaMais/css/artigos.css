@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif ;
+    font-weight: bold;
+    color: white;
+}
+
+body{
+    background-color: #1d1d1d;
+}
+
+::selection {
+    color: #1d1d1d;
+    background-color: white;
+}
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo{
+    scale: 0.4;
+}
+
+.header-navbar{
+    width: 100%;
+}
+
+.navbar-brand{
+    max-height: 50px;
+    margin-top: -5.9vh;
+}
+
+.nav-link{
+    color: white;
+    font-size: 1.1rem;
+}
+
+.nav-link:hover{
+    color: #a23a85;
+}
+
+/* Titulo */
+
+.titulo{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+/* Artigos */
+
+.col-md-4{
+    margin-top: 2vh;
+}
+
+.card{
+    padding: 0.2vh;
+    height: 30vh;
+}
+
+.col-md-4 img{
+    max-height: 20vh;
+    object-fit: cover;
+}
+
+.col-md-4 p{
+    color: #1d1d1d;
+}
+
+.col-md-4 h5{
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+.btn-primary{
+    font-weight: bold;
+    background-color: #2a2a2a;
+    border: solid 2px white;
+}
+
+.btn-primary:hover{
+    background-color: #1d1d1d;
+    border: solid 2px #a23a85;
+}
+
+.card-text::selection{
+    color: white;
+    background-color: #1d1d1d;
+}
+
+.card-title::selection{
+    color: white;
+    background-color: #1d1d1d;
+}

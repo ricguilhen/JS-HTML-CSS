@@ -43,6 +43,7 @@ document.getElementById("pay-button").addEventListener("click", function() {
             totalPrice: totalPrice
         };
 
+        redirect();
         localStorage.setItem("receipt", JSON.stringify(receipt));
     }
 
@@ -50,6 +51,6 @@ document.getElementById("pay-button").addEventListener("click", function() {
 
 function redirect(){
     setTimeout(function() {
-        window.location.href = "receipt.html";
+        window.location.href = "../receipt.html";
     }, 1000);
 }
